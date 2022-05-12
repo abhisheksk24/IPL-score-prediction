@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>First Innings Score Predictor</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="mt-1 pt-3">
+
+        <div class="container">
+            <div class="container-fluid px-4 my-class1">
+                <div class="row g-3 my-2">
+                    <div class="rounded">
+                        <div class="border p-3">
+
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <h2>First Innings Score Predictor
+                                        for Indian Premier League (IPL)</h2>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    A Machine Learning Web App, Built with Flask, Deployed using Heroku.
+                                </figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-6">
+                    <div class="rounded">
+                        <div class="border p-3">
+
+                            <!-- Prediction Area -->
+                            <div class="prediction-area">
+
+                                <!-- Prediction Form -->
+                                <div class='div2'>
+                                    <form action="{{ url_for('predict') }}" method="POST">
+                                        <!-- Batting Team Dropdown -->
+                                        <select class="form-select" name="batting-team">
+                                            <option value="none">--- Select a Batting team ---</option>
+                                            <option value="Mumbai Indians">Mumbai Indians</option>
+                                            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                                            <option value="Chennai Super Kings">Chennai Super Kings</option>
+                                            <option value="Rajasthan Royals">Rajasthan Royals</option>
+                                            <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore
+                                            </option>
+                                            <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                                        </select><br>
+                                        <!-- Bowling Team Dropdown -->
+                                        <select class="form-select" name="bowling-team">
+                                            <option value="none">--- Select a Bowling team ---</option>
+                                            <option value="Mumbai Indians">Mumbai Indians</option>
+                                            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                                            <option value="Chennai Super Kings">Chennai Super Kings</option>
+                                            <option value="Rajasthan Royals">Rajasthan Royals</option>
+                                            <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore
+                                            </option>
+                                            <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                                        </select><br>
+
+                                        <input class="form-control" type="text" name="overs"
+                                            placeholder="Overs (>= 5.0) eg. 7.2"><br>
+                                        <input class="form-control" type="text" name="runs"
+                                            placeholder="Runs eg. 64"><br>
+                                        <input class="form-control" type="text" name="wickets"
+                                            placeholder="Wickets eg. 4"><br>
+                                        <input class="form-control" type="text" name="runs_in_prev_5"
+                                            placeholder="Runs scored in previous 5 Overs eg. 42"><br>
+                                        <input class="form-control" type="text" name="wickets_in_prev_5"
+                                            placeholder="Wickets taken in previous 5 Overs eg. 3"><br>
+
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <input type="submit" class="btn btn-outline-dark" value="Predict Score">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-6">
+                    <div class="rounded">
+                        <div class='footer'>
+                            <div class="contact">
+                                <a target="_blank" href="https://github.com/abhisheksk24"><i
+                                        class="fab fa-github fa-lg contact-icon"></i></a>
+                                <a target="_blank" href="https://github.com/abhisheksk24"><i
+                                        class="fab fa-github fa-lg contact-icon"></i></a>
+                            </div>
+                            <p class='footer-description'>Made with ❤️ by Abhishek & Pratik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
