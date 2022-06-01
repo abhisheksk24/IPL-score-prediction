@@ -1,7 +1,9 @@
 # IPL Score Prediction
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![scikit-learnn](https://img.shields.io/badge/Library-Scikit_Learn-orange.svg)
 * IPL score prediction with Machine Learning
-* Deployed At - https://cricketscorepredicter.herokuapp.com/
+* Deployed on Heroku at - https://cricketscorepredicter.herokuapp.com/
+* Notebook : https://github.com/abhisheksk24/IPL-score-prediction/blob/master/notebook/crickscore.py
+* Dataset : https://github.com/abhisheksk24/IPL-score-prediction/blob/master/notebook/ipl.csv
 # Sample Screenshots
 <table>
   <tr>
